@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'To_Do.task',
     'To_Do.user',
     'To_Do.about',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

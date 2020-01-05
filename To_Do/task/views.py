@@ -48,14 +48,20 @@ def taskView(request, id):
     return render(request, 'task/task.html', {'task':task})
     
 def taskList (request):
-    tasks_list = Task.objects.all().order_by('-created_at') #atualizar
+    search = request.GET.get('search')
+    
+    if search:
+        tasks = Task.objects.filter(title__icontains=search)
+    else:
 
-    paginator = Paginator(tasks_list, 3)
+        tasks_list = Task.objects.all().order_by('-created_at') #atualizar
 
-    page = request.GET.get('page')
+        paginator = Paginator(tasks_list, 3)    
 
-    tasks = paginator.get_page(page)
+        page = request.GET.get('page')
 
+        tasks = paginator.get_page(page)
+          
     return render(request, 'task/list.html', {'tasks': tasks})
 
 def helloWorld (request):
