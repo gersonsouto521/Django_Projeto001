@@ -1,5 +1,12 @@
+/*LOGIN */
+
 .container-fluid{
     padding: 0px;
+}
+
+.change-form-p{
+    margin-top:30px;
+    text-align: center;
 }
 
 /*NAVBAR*/
@@ -122,6 +129,6 @@ ul.messages li{
 
 /* Login */
 
-.auto-card{
+.auth-card{
     margin-bottom: 30px;
 }

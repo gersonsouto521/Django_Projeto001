@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'To_Do.user',
     'To_Do.about',
     'crispy_forms',
+    'To_Do.accounts',
 ]
 
 MIDDLEWARE = [
