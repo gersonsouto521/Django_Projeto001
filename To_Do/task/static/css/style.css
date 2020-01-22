@@ -74,6 +74,10 @@
     padding-top: 10px;
     border-bottom: 1px dashed #202020;
 }
+.task-item.done{
+    background-color: #ccc;
+ 
+}
 
 .fas.fa-trash, .fas.fa-edit, .fas.fas.fa-check{
     cursor: pointer;
@@ -140,4 +144,16 @@ ul.messages li{
 
 .auth-card{
     margin-bottom: 30px;
+}
+
+/* Filtro */
+.filter-div{
+    margin-bottom: 15px;
+    padding: 0px;
+}
+ 
+#filter{
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
 }

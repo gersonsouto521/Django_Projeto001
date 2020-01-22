@@ -16,6 +16,15 @@
             <i class="fas fa-search" id="search-btn"></i>
         </form>
     </div>
+    <div class="col-12 filter-div">
+        <span>Filtrado Por:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="">Escolha uma Opção</option>
+            <option value="done">Tarefas Concluidas</option>
+            <option value="doing">Tarefas a Fazer</option>
+        </select>
+
+    </div>
     {% if messages %}
         <ul class ="messages">
             {% for message in messages %}
