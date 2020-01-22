@@ -70,8 +70,19 @@ def taskList (request):
           
     return render(request, 'task/list.html', {'tasks': tasks})
 
+@login_required
+def changeStatus(request, id):
+    task = get_object_or_404(Task, pk=id)
+
+    if(task.done == 'doing'):
+        task.done = 'done'
+    else:
+        task.done = 'doing'
+    task.save()
+    return redirect('/')
+
 def helloWorld (request):
-    return HttpResponse('Hello World!!!')
+    return HttpResponse('Hello Worlds!!!')
 
 def yourName(request, name):
     return render(request, 'task/yourname.html',{'name':name})
